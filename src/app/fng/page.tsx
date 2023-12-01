@@ -41,7 +41,7 @@ export default function fng() {
             standing beside each of us.
           </p>
           <p className="text-cmu pt-5">
-            "Here is one undeniable truth that I know about each of us, we need
+            &quot;Here is one undeniable truth that I know about each of us, we need
             authentic relationships with other men who are working to be strong
             fathers, husbands and leaders. Isolation will destroy a man! We have
             the opportunity to change our community and the trajectory of our
@@ -49,7 +49,7 @@ export default function fng() {
             product. The work out is the magnet, the relationships and community
             with other men will keep bringing you back. Lock shields with us and
             help us accomplish F3&apos;s mission to invigorate male leadership in our
-            community."
+            community.&quot;
           </p>
           <p className="text-cmu pt-5">(DREDD, F3 Founder)</p>
         </section>

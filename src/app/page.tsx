@@ -139,7 +139,7 @@ export default function Home() {
             requirement for membership other than showing up at the appointed
             time + place and following the workout leader [the “Q” in F³
             lexicon]. If you still have questions just ask any of the guys and
-            they'll help or point you in the right direction!
+            they&apos;ll help or point you in the right direction!
           </p>
           <Button href="/fng" text="WHAT TO EXPECT" />
         </section>
