@@ -22,8 +22,8 @@ export default function fng() {
           <p className="text-cmu pt-5">
             We appreciate you joining us and there is a lot of information to
             tell you but to avoid overwhelming you here are a few ways to keep
-            in touch and know what's going on in F3 Boise. If you still have
-            questions just ask any of the guys and they'll help or point you in
+            in touch and know what&apos;s going on in F3 Boise. If you still have
+            questions just ask any of the guys and they&apos;ll help or point you in
             the right direction!
           </p>
           <p className="text-cmu pt-5">
@@ -48,7 +48,7 @@ export default function fng() {
             families. Getting in the best shape of your life is just a by
             product. The work out is the magnet, the relationships and community
             with other men will keep bringing you back. Lock shields with us and
-            help us accomplish F3's mission to invigorate male leadership in our
+            help us accomplish F3&apos;s mission to invigorate male leadership in our
             community."
           </p>
           <p className="text-cmu pt-5">(DREDD, F3 Founder)</p>
@@ -60,7 +60,7 @@ export default function fng() {
             <li>
               When you are first starting, it is important to remember to MODIFY
               as needed during the beatdowns. If you want to go harder - go
-              harder. If you have not exercised in a long time, slow down. Don't
+              harder. If you have not exercised in a long time, slow down. Don&apos;t
               hurt yourself or even worse, get discouraged. Just show up, work
               hard and give it your best. That is all that matters. We are not
               here competing against one another. We are freaking proud of you
@@ -100,7 +100,7 @@ export default function fng() {
             <hr className="my-5" />
             <li>
               If you are not meeting a friend at your first post, simply show up
-              and introduce yourself as an FNG. You'll be welcomed.
+              and introduce yourself as an FNG. You&apos;ll be welcomed.
             </li>
             <hr className="my-5" />
           </ul>
