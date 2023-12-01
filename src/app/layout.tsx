@@ -16,6 +16,7 @@ export default function RootLayout({
       <Head>
         <link href={f3White.src} rel="shortcut icon" />
         <link href={f3White.src} rel="apple-touch-icon" />
+        <meta name="robots" content="noindex,nofollow" />
       </Head>
       <body
         className={`${inter.className} bg-iron text-white text-center font-sans text-lg`}
