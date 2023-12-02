@@ -22,9 +22,9 @@ export default function fng() {
           <p className="text-cmu pt-5">
             We appreciate you joining us and there is a lot of information to
             tell you but to avoid overwhelming you here are a few ways to keep
-            in touch and know what&apos;s going on in F3 Boise. If you still have
-            questions just ask any of the guys and they&apos;ll help or point you in
-            the right direction!
+            in touch and know what&apos;s going on in F3 Boise. If you still
+            have questions just ask any of the guys and they&apos;ll help or
+            point you in the right direction!
           </p>
           <p className="text-cmu pt-5">
             So, you got past{" "}
@@ -41,15 +41,15 @@ export default function fng() {
             standing beside each of us.
           </p>
           <p className="text-cmu pt-5">
-            &quot;Here is one undeniable truth that I know about each of us, we need
-            authentic relationships with other men who are working to be strong
-            fathers, husbands and leaders. Isolation will destroy a man! We have
-            the opportunity to change our community and the trajectory of our
-            families. Getting in the best shape of your life is just a by
+            &quot;Here is one undeniable truth that I know about each of us, we
+            need authentic relationships with other men who are working to be
+            strong fathers, husbands and leaders. Isolation will destroy a man!
+            We have the opportunity to change our community and the trajectory
+            of our families. Getting in the best shape of your life is just a by
             product. The work out is the magnet, the relationships and community
             with other men will keep bringing you back. Lock shields with us and
-            help us accomplish F3&apos;s mission to invigorate male leadership in our
-            community.&quot;
+            help us accomplish F3&apos;s mission to invigorate male leadership
+            in our community.&quot;
           </p>
           <p className="text-cmu pt-5">(DREDD, F3 Founder)</p>
         </section>
@@ -60,11 +60,11 @@ export default function fng() {
             <li>
               When you are first starting, it is important to remember to MODIFY
               as needed during the beatdowns. If you want to go harder - go
-              harder. If you have not exercised in a long time, slow down. Don&apos;t
-              hurt yourself or even worse, get discouraged. Just show up, work
-              hard and give it your best. That is all that matters. We are not
-              here competing against one another. We are freaking proud of you
-              for showing up at 5:30 in the morning to exercise!
+              harder. If you have not exercised in a long time, slow down.
+              Don&apos;t hurt yourself or even worse, get discouraged. Just show
+              up, work hard and give it your best. That is all that matters. We
+              are not here competing against one another. We are freaking proud
+              of you for showing up at 5:30 in the morning to exercise!
             </li>
             <hr className="my-5" />
             <li>

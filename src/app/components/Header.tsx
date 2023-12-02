@@ -5,7 +5,7 @@ import f3White from "../../../public/f3-white.png";
 
 export default function Header({ href }: { href: string }) {
   const pages = [
-    { href: "/", text: "HOME" },
+    // { href: "/", text: "HOME" },
     { href: "/fng", text: "NEW TO F3 [FNG]" },
     { href: "/workouts", text: "WORKOUTS [AO]" },
   ];
@@ -24,7 +24,7 @@ export default function Header({ href }: { href: string }) {
       <nav className="uppercase">
         <ul>
           {pages.map((p, i) => (
-            <li key={i}>
+            <li key={i} className={i < pages.length ? "pt-2" : ""}>
               <Link
                 href={p.href}
                 title={p.text}
