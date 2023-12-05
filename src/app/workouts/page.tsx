@@ -153,7 +153,7 @@ export default function fng() {
         text: "Riverwalk Park (Basketball Court)",
       },
       day: WorkoutDays.SATURDAY,
-      time: WorkoutTimes["0515"],
+      time: WorkoutTimes["0600"],
     },
   ];
   return (
