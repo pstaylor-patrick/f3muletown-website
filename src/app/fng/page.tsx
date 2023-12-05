@@ -22,7 +22,7 @@ export default function fng() {
           <p className="text-cmu pt-5">
             We appreciate you joining us and there is a lot of information to
             tell you but to avoid overwhelming you here are a few ways to keep
-            in touch and know what&apos;s going on in F3 Boise. If you still
+            in touch and know what&apos;s going on in F3 Muletown. If you still
             have questions just ask any of the guys and they&apos;ll help or
             point you in the right direction!
           </p>
