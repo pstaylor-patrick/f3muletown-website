@@ -92,6 +92,14 @@ export default function Home() {
               </p>
             </li>
             <li>
+              <h3 className={corePrinciplesHeadingClassNames}>
+                Open to all Men
+              </h3>
+              <p className={corePrinciplesDescriptionClassNames}>
+                No matter the man, you are welcome here.
+              </p>
+            </li>
+            <li>
               <h3 className={corePrinciplesHeadingClassNames}>Held Outdoors</h3>
               <p className={corePrinciplesDescriptionClassNames}>
                 Rain or Shine, Hot or Cold, we are out there.
