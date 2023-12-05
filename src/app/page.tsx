@@ -14,7 +14,7 @@ import f3HeroImg from "../../public/f3-compass-2023-11-14.jpg";
 
 export const metadata: Metadata = {
   title: "F3 Muletown",
-  description: "FREE workout groups for MEN",
+  description: "FREE workout group for MEN",
 };
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
               <span className="block text-5xl py-5">F3 MULETOWN</span>
             </h2>
             <p className="subtitle text-xl pb-10 opacity-70">
-              FREE workout groups for MEN
+              FREE workout group for MEN
             </p>
           </div>
           <Image
