@@ -4,8 +4,6 @@ import Head from "next/head";
 
 import "./globals.css";
 
-import f3White from "../../public/f3-white.png";
-
 export default function RootLayout({
   children,
 }: {
@@ -14,8 +12,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link href={f3White.src} rel="shortcut icon" />
-        <link href={f3White.src} rel="apple-touch-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="robots" content="noindex,nofollow" />
       </Head>
       <body
