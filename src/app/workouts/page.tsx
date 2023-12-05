@@ -123,7 +123,7 @@ export default function fng() {
       ao: "The Challenge",
       // q: "Dr. Quinn",
       //   avgAttendance: 9,
-      style: WorkoutStyles.RUNNING_BEATDOWN,
+      style: WorkoutStyles.BEATDOWN,
       location: {
         href: "https://goo.gl/maps/Rv4udm1mpBXZFdGy8",
         text: "Columbia State Community College",

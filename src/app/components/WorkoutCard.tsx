@@ -4,7 +4,6 @@ export const WorkoutStyles = {
   MURPH: "Murph",
   BEATDOWN: "Beatdown",
   RUN: "Run",
-  RUNNING_BEATDOWN: "Running Beatdown",
   TRAIL_RUN: "Trail Run",
   RUCKING: "Ruck",
   RUCKS_SANDBAGS: "Rucks & Sandbags",
