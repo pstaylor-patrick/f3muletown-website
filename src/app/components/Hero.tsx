@@ -14,7 +14,7 @@ export default function Hero({ title, subtitle, imgUrl }: HeroProps) {
       </div>
       <div
         style={{ backgroundImage: `url('${imgUrl}')` }}
-        className="absolute inset-0 bg-cover bg-bottom bg-no-repeat grayscale opacity-60 -z-50"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale opacity-60 -z-50"
       />
     </section>
   );
