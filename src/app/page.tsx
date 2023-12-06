@@ -11,6 +11,7 @@ import f3MuletownWhite from "../../public/f3-muletown-white.png";
 import f3White from "../../public/f3-white.png";
 import f3ShovelFlag from "../../public/f3-shovel-flag.png";
 import f3HeroImg from "../../public/f3-compass-2023-11-14.jpg";
+import CorePrinciple from "./components/CorePrinciple";
 
 export const metadata: Metadata = {
   title: "F3 Muletown",
@@ -20,9 +21,6 @@ export const metadata: Metadata = {
 export default function Home() {
   const href = "/";
   const commonSliceClassNames = "py-8 px-4";
-  const corePrinciplesHeadingClassNames =
-    "font-sans text-xl normal-case font-medium";
-  const corePrinciplesDescriptionClassNames = "text-cmu text-sm mb-5";
   return (
     <>
       <Header href={href} />
@@ -83,42 +81,26 @@ export default function Home() {
           />
           <h2>CORE PRINCIPLES</h2>
           <ul className="pt-10">
-            <li>
-              <h3 className={corePrinciplesHeadingClassNames}>
-                Free of Charge
-              </h3>
-              <p className={corePrinciplesDescriptionClassNames}>
-                Never pay to workout, ever.
-              </p>
-            </li>
-            <li>
-              <h3 className={corePrinciplesHeadingClassNames}>
-                Open to all Men
-              </h3>
-              <p className={corePrinciplesDescriptionClassNames}>
-                No matter the man, you are welcome here.
-              </p>
-            </li>
-            <li>
-              <h3 className={corePrinciplesHeadingClassNames}>Held Outdoors</h3>
-              <p className={corePrinciplesDescriptionClassNames}>
-                Rain or Shine, Hot or Cold, we are out there.
-              </p>
-            </li>
-            <li>
-              <h3 className={corePrinciplesHeadingClassNames}>Peer Led</h3>
-              <p className={corePrinciplesDescriptionClassNames}>
-                Rotating fashion of men leading each other.
-              </p>
-            </li>
-            <li>
-              <h3 className={corePrinciplesHeadingClassNames}>
-                Ends with a COT
-              </h3>
-              <p className={corePrinciplesDescriptionClassNames}>
-                Always ends with a Circle of Trust.
-              </p>
-            </li>
+            <CorePrinciple
+              principle="Free of Charge"
+              description="Never pay to workout, ever."
+            />
+            <CorePrinciple
+              principle="Open to all Men"
+              description="No matter the man, you are welcome here."
+            />
+            <CorePrinciple
+              principle="Held Outdoors"
+              description="Rain or Shine, Hot or Cold, we are out there."
+            />
+            <CorePrinciple
+              principle="Peer Led"
+              description="Rotating fashion of men leading each other."
+            />
+            <CorePrinciple
+              principle="Ends with a COT"
+              description="Always ends with a Circle of Trust."
+            />
           </ul>
         </section>
         <section className={`bg-iron pt-20 px-4 pb-24`}>
