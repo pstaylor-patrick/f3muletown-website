@@ -17,6 +17,7 @@ export const WorkoutDays = {
   THURSDAY: "Thursday",
   FRIDAY: "Friday",
   THIRD_FRIDAY: "Every Third Friday",
+  LAST_FRIDAY: "Last Friday of Month",
   SATURDAY: "Saturday",
   SUNDAY: "Sunday",
 };
