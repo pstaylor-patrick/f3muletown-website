@@ -60,7 +60,9 @@ export function workoutsTomorrow(workouts: WorkoutCardProps[]) {
         return w.day === WorkoutDays.THURSDAY;
       case days.THURSDAY:
         return (
-          w.day === WorkoutDays.FRIDAY || w.day === WorkoutDays.THIRD_FRIDAY
+          w.day === WorkoutDays.FRIDAY ||
+          w.day === WorkoutDays.THIRD_FRIDAY ||
+          w.day === WorkoutDays.LAST_FRIDAY
         );
       case days.FRIDAY:
         return w.day === WorkoutDays.SATURDAY;
