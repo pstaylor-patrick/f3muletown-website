@@ -261,56 +261,6 @@ export default function fng() {
               </ul>
             </>
           )}
-          {/* #region old */}
-          {workoutsTomorrow(workouts).length > 0 ? (
-            <>
-              <h2>JOIN US TOMORROW</h2>
-              <p className="text-cmu pb-10">
-                Just show up and introduce yourself as an{" "}
-                <Link href="/fng">FNG</Link>, you will be welcomed!
-              </p>
-              <Button
-                href="https://f3near.me"
-                text="FIND NEAREST TO ME"
-                target="_blank"
-              />
-              <div className="my-10"></div>
-              <ul>
-                {workoutsTomorrow(workouts).map((w, i) => (
-                  <li key={i} className={i > 0 ? "pt-5" : ""}>
-                    <WorkoutCard
-                      ao={w.ao}
-                      q={w.q}
-                      avgAttendance={w.avgAttendance}
-                      style={w.style}
-                      location={w.location}
-                      day={w.day}
-                      time={w.time}
-                    />
-                  </li>
-                ))}
-              </ul>
-              <h2 className="py-5">OR ANOTHER TIME</h2>
-            </>
-          ) : (
-            <h2 className="py-5">JOIN US</h2>
-          )}
-          <ul>
-            {workoutsAnotherDay(workouts).map((w, i) => (
-              <li key={i} className={i > 0 ? "pt-5" : ""}>
-                <WorkoutCard
-                  ao={w.ao}
-                  q={w.q}
-                  avgAttendance={w.avgAttendance}
-                  style={w.style}
-                  location={w.location}
-                  day={w.day}
-                  time={w.time}
-                />
-              </li>
-            ))}
-          </ul>
-          {/* #endregion old */}
         </section>
       </main>
       <Footer />
