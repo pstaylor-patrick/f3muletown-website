@@ -7,18 +7,24 @@ import Footer from "./components/Footer";
 import Button from "./components/Button";
 import Hero from "./components/Hero";
 
+/** TODO: templatize media */
 import f3MuletownWhite from "../../public/f3-muletown-white.png";
 import f3White from "../../public/f3-white.png";
 import f3ShovelFlag from "../../public/f3-shovel-flag.png";
 import f3HeroImg from "../../public/f3-compass-2023-11-14.jpg";
 import CorePrinciple from "./components/CorePrinciple";
 
+/** TODO: templatize metadata */
 export const metadata: Metadata = {
   title: "F3 Muletown",
   description: "FREE workout group for MEN",
 };
 
-export default function Home() {
+interface HomeProps {
+  regionName: string;
+}
+
+export default function Home({ regionName }: HomeProps) {
   const href = "/";
   const commonSliceClassNames = "py-8 px-4";
   return (
@@ -34,7 +40,9 @@ export default function Home() {
           <div className="shadow-xl">
             <h2 className="leading-none">
               <span className="opacity-70">THIS IS</span>
-              <span className="block text-5xl py-5">F3 MULETOWN</span>
+              <span className="block text-5xl py-5">
+                F3 {regionName?.toUpperCase()}
+              </span>
             </h2>
             <p className="subtitle text-xl pb-10 opacity-70">
               FREE workout group for MEN
@@ -42,7 +50,7 @@ export default function Home() {
           </div>
           <Image
             src={f3MuletownWhite}
-            alt="F3 Muletown White"
+            alt={`F3 ${regionName} White`}
             width={200}
             className="pt-8 pb-4 my-0 mx-auto"
           />
@@ -137,4 +145,10 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch("https://cdn.f3muletown.com/region.muletown.json");
+  const data = await res.json();
+  return { props: { regionName: data.regionName } };
 }
