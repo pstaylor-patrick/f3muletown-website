@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "required": [
+        "name"
+    ],
+    "properties": {
+        "regionName": {
+            "type": "string",
+            "examples": ["Muletown", "Spring Hill", "Sandhills"],
+            "maxLength": 50,
+            "minLength": 1,
+            "pattern": "[A-Z]{1,}.{1,}"
+        },
+        "cityName": {
+            "type": "string",
+            "examples": ["Columbia", "Spring Hill", "Charlotte"],
+            "maxLength": 50,
+            "minLength": 1,
+            "pattern": "[A-Z]{1,}.{1,}"
+        },
+        "stateName": {
+            "type": "string",
+            "examples": ["Tennessee", "North Carolina", "Florida"],
+            "maxLength": 50,
+            "minLength": 1,
+            "Pattern": "[A-Z]{1,}.{1,}"
+        }
+    }
+}
