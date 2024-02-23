@@ -14,7 +14,7 @@ import WorkoutCard, {
 
 import f3HeroImg from "../../../public/f3-darkhorse-2023-11-04.jpg";
 
-export default function fng() {
+export default function Page() {
   const href = "/workouts";
   const mapDetails = {
     lat: 35.6440534,

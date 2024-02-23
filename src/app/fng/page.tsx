@@ -6,7 +6,7 @@ import Hero from "../_components/Hero";
 
 import f3HeroImg from "../../../public/f3-refuge-2023-11-09.jpg";
 
-export default function fng() {
+export default function Page() {
   const href = "/fng";
   return (
     <>

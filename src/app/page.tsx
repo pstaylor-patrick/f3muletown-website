@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "FREE workout group for MEN",
 };
 
-export default function Home() {
+export default function Page() {
   const href = "/";
   const commonSliceClassNames = "py-8 px-4";
   return (
