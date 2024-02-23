@@ -1,16 +1,16 @@
 import Link from "next/link";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import Button from "../components/Button";
+import Header from "../_components/Header";
+import Footer from "../_components/Footer";
+import Hero from "../_components/Hero";
+import Button from "../_components/Button";
 import WorkoutCard, {
   WorkoutStyles,
   WorkoutDays,
   WorkoutTimes,
   workoutsTomorrow,
   workoutsAnotherDay,
-} from "../components/WorkoutCard";
+} from "../_components/WorkoutCard";
 
 import f3HeroImg from "../../../public/f3-darkhorse-2023-11-04.jpg";
 

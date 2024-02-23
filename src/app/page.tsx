@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Button from "./components/Button";
-import Hero from "./components/Hero";
+import Header from "./_components/Header";
+import Footer from "./_components/Footer";
+import Button from "./_components/Button";
+import Hero from "./_components/Hero";
 
 import f3MuletownWhite from "../../public/f3-muletown-white.png";
 import f3White from "../../public/f3-white.png";
 import f3ShovelFlag from "../../public/f3-shovel-flag.png";
 import f3HeroImg from "../../public/f3-compass-2023-11-14.jpg";
-import CorePrinciple from "./components/CorePrinciple";
+import CorePrinciple from "./_components/CorePrinciple";
 
 export const metadata: Metadata = {
   title: "F3 Muletown",

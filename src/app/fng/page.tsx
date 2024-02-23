@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
+import Header from "../_components/Header";
+import Footer from "../_components/Footer";
+import Hero from "../_components/Hero";
 
 import f3HeroImg from "../../../public/f3-refuge-2023-11-09.jpg";
 
