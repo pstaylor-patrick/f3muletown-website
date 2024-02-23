@@ -167,6 +167,18 @@ export default function fng() {
       day: WorkoutDays.SATURDAY,
       time: WorkoutTimes["0600"],
     },
+    {
+      ao: "Hawkeye",
+      // q: "Halftime",
+      //   avgAttendance: 5,
+      style: WorkoutStyles.BEATDOWN,
+      location: {
+        href: "https://maps.app.goo.gl/hpiKvFLT1iGJVwGG8",
+        text: "Hampshire School",
+      },
+      day: WorkoutDays.SATURDAY_EXCEPT_LAST,
+      time: WorkoutTimes["0600"],
+    },
   ];
   const today = new Date().getDay();
   const saturday = 6;

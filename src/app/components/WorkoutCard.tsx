@@ -19,6 +19,7 @@ export const WorkoutDays = {
   THIRD_FRIDAY: "Every Third Friday",
   LAST_FRIDAY: "Last Friday of Month",
   SATURDAY: "Saturday",
+  SATURDAY_EXCEPT_LAST: "All Saturdays Except the Last of the Month",
   SUNDAY: "Sunday",
 };
 function dayToNumber(day: string) {
@@ -65,7 +66,10 @@ export function workoutsTomorrow(workouts: WorkoutCardProps[]) {
           w.day === WorkoutDays.LAST_FRIDAY
         );
       case days.FRIDAY:
-        return w.day === WorkoutDays.SATURDAY;
+        return (
+          w.day === WorkoutDays.SATURDAY ||
+          w.day === WorkoutDays.SATURDAY_EXCEPT_LAST
+        );
       case days.SATURDAY:
         return w.day === WorkoutDays.SUNDAY;
       default:
