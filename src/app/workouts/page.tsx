@@ -144,18 +144,6 @@ export default function fng() {
       time: WorkoutTimes["0515"],
     },
     {
-      ao: "QSource",
-      // q: "Baguette",
-      //   avgAttendance: 9,
-      style: WorkoutStyles.THIRD_F,
-      location: {
-        href: "https://goo.gl/maps/j3YiN4xen7mRy8RK8https://maps.app.goo.gl/bCjzyzhA35ba5m818",
-        text: "Maury County Park (Baseball Pavilion)",
-      },
-      day: WorkoutDays.LAST_FRIDAY,
-      time: WorkoutTimes["0530"],
-    },
-    {
       ao: "Darkhorse",
       // q: "Go Pee",
       //   avgAttendance: 9,

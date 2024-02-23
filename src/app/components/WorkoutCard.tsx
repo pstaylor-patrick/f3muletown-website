@@ -17,7 +17,6 @@ export const WorkoutDays = {
   THURSDAY: "Thursday",
   FRIDAY: "Friday",
   THIRD_FRIDAY: "Every Third Friday",
-  LAST_FRIDAY: "Last Friday of Month",
   SATURDAY: "Saturday",
   SATURDAY_EXCEPT_LAST: "All Saturdays Except the Last of the Month",
   SUNDAY: "Sunday",
@@ -61,9 +60,7 @@ export function workoutsTomorrow(workouts: WorkoutCardProps[]) {
         return w.day === WorkoutDays.THURSDAY;
       case days.THURSDAY:
         return (
-          w.day === WorkoutDays.FRIDAY ||
-          w.day === WorkoutDays.THIRD_FRIDAY ||
-          w.day === WorkoutDays.LAST_FRIDAY
+          w.day === WorkoutDays.FRIDAY || w.day === WorkoutDays.THIRD_FRIDAY
         );
       case days.FRIDAY:
         return (
