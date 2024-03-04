@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import Header from '../_components/Header';
 import Footer from '../_components/Footer';
 import Hero from '../_components/Hero';
