@@ -8,7 +8,7 @@ export default function Header({ href }: { href: string }) {
     // { href: "/", text: "HOME" },
     { href: '/fng', text: 'NEW TO F3 [FNG]' },
     { href: '/workouts', text: 'WORKOUTS [AO]' },
-    { href: '/convergence', text: 'CONVERGENCE' },
+    { href: '/convergence', text: 'CONVERGENCE [HC]' },
   ];
 
   return (
