@@ -33,7 +33,7 @@ export default function Page() {
           instilling hope and providing a robust framework for acceleration in
           every facet of life. Our agenda is meticulously crafted to call forth
           the leader within, inviting participants to step into a life led by
-          virtue and marked by God's presence.
+          virtue and marked by God&apos;s presence.
         </p>
         <Button href={formHref} text="SUBMIT YOUR HC" target="_blank" />
       </section>
