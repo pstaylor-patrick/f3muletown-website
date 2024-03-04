@@ -12,9 +12,6 @@ export default function Page() {
   const formHref = 'https://forms.gle/afmWCdgtSPTCKbPD7';
   return (
     <>
-      <Head>
-        <meta name="robots" content="noindex, nofollow" />
-      </Head>
       <Header href={href} />
       <main>
         <Hero
