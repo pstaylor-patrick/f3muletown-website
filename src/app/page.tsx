@@ -1,26 +1,26 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
-import Button from "./_components/Button";
-import Hero from "./_components/Hero";
+import Header from './_components/Header';
+import Footer from './_components/Footer';
+import Button from './_components/Button';
+import Hero from './_components/Hero';
 
-import f3MuletownWhite from "../../public/f3-muletown-white.png";
-import f3White from "../../public/f3-white.png";
-import f3ShovelFlag from "../../public/f3-shovel-flag.png";
-import f3HeroImg from "../../public/f3-compass-2023-11-14.jpg";
-import CorePrinciple from "./_components/CorePrinciple";
+import f3MuletownWhite from '../../public/f3-muletown-white.png';
+import f3White from '../../public/f3-white.png';
+import f3ShovelFlag from '../../public/f3-shovel-flag.png';
+import f3HeroImg from '../../public/f3-compass-2023-11-14.jpg';
+import CorePrinciple from './_components/CorePrinciple';
 
 export const metadata: Metadata = {
-  title: "F3 Muletown",
-  description: "FREE workout group for MEN",
+  title: 'F3 Muletown',
+  description: 'FREE workout group for MEN',
 };
 
 export default function Page() {
-  const href = "/";
-  const commonSliceClassNames = "py-8 px-4";
+  const href = '/';
+  const commonSliceClassNames = 'py-8 px-4';
   return (
     <>
       <Header href={href} />
@@ -118,7 +118,7 @@ export default function Page() {
         <section className={`bg-gloom leading-tight pt-20 px-4 pb-24`}>
           <h2 className="text-5xl">[F.N.G.]</h2>
           <p className="text-cmu pt-5">
-            Hey Friendly New Guy... What did you{" "}
+            Hey Friendly New Guy... What did you{' '}
             <span className="italic">think</span> FNG stood for?
           </p>
           <p className="text-xl py-5">

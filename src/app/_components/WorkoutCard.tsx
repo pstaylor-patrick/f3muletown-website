@@ -1,25 +1,25 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const WorkoutStyles = {
-  MURPH: "Murph",
-  BEATDOWN: "Beatdown",
-  RUN: "Run",
-  TRAIL_RUN: "Trail Run",
-  RUCKING: "Ruck",
-  RUCKS_SANDBAGS: "Rucks & Sandbags",
-  WEIGHT_LIFTING: "Weight Lifting",
-  THIRD_F: "3rd F (Faith)",
+  MURPH: 'Murph',
+  BEATDOWN: 'Beatdown',
+  RUN: 'Run',
+  TRAIL_RUN: 'Trail Run',
+  RUCKING: 'Ruck',
+  RUCKS_SANDBAGS: 'Rucks & Sandbags',
+  WEIGHT_LIFTING: 'Weight Lifting',
+  THIRD_F: '3rd F (Faith)',
 };
 export const WorkoutDays = {
-  MONDAY: "Monday",
-  TUESDAY: "Tuesday",
-  WEDNESDAY: "Wednesday",
-  THURSDAY: "Thursday",
-  FRIDAY: "Friday",
-  THIRD_FRIDAY: "Every Third Friday",
-  SATURDAY: "Saturday",
-  SATURDAY_EXCEPT_LAST: "All Saturdays Except the Last of the Month",
-  SUNDAY: "Sunday",
+  MONDAY: 'Monday',
+  TUESDAY: 'Tuesday',
+  WEDNESDAY: 'Wednesday',
+  THURSDAY: 'Thursday',
+  FRIDAY: 'Friday',
+  THIRD_FRIDAY: 'Every Third Friday',
+  SATURDAY: 'Saturday',
+  SATURDAY_EXCEPT_LAST: 'All Saturdays Except the Last of the Month',
+  SUNDAY: 'Sunday',
 };
 function dayToNumber(day: string) {
   return Object.values(WorkoutDays).indexOf(day);
@@ -78,17 +78,17 @@ export function workoutsTomorrow(workouts: WorkoutCardProps[]) {
 }
 export function workoutsAnotherDay(workouts: WorkoutCardProps[]) {
   const result = workouts.filter(
-    (w) => !workoutsTomorrow(workouts).includes(w),
+    (w) => !workoutsTomorrow(workouts).includes(w)
   );
   sortWorkouts(result);
   return result;
 }
 export const WorkoutTimes = {
-  "0515": "5:15 AM - 6:15 AM",
-  "0520": "5:20 AM - 6:15 AM",
-  "0525": "5:25 AM - 6:15 AM",
-  "0530": "5:30 AM - 6:15 AM",
-  "0600": "6:00 AM - 7:00 AM",
+  '0515': '5:15 AM - 6:15 AM',
+  '0520': '5:20 AM - 6:15 AM',
+  '0525': '5:25 AM - 6:15 AM',
+  '0530': '5:30 AM - 6:15 AM',
+  '0600': '6:00 AM - 7:00 AM',
 };
 
 interface WorkoutCardProps {

@@ -1,13 +1,13 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import Header from "../_components/Header";
-import Footer from "../_components/Footer";
-import Hero from "../_components/Hero";
+import Header from '../_components/Header';
+import Footer from '../_components/Footer';
+import Hero from '../_components/Hero';
 
-import f3HeroImg from "../../../public/f3-refuge-2023-11-09.jpg";
+import f3HeroImg from '../../../public/f3-refuge-2023-11-09.jpg';
 
 export default function Page() {
-  const href = "/fng";
+  const href = '/fng';
   return (
     <>
       <Header href={href} />
@@ -27,13 +27,13 @@ export default function Page() {
             point you in the right direction!
           </p>
           <p className="text-cmu pt-5">
-            So, you got past{" "}
+            So, you got past{' '}
             <Link
               href="https://f3nation.com/top-five-eh-excuses/"
               target="_blank"
             >
               our favorite excuses
-            </Link>{" "}
+            </Link>{' '}
             and decided to participate? Greatness.
           </p>
           <p className="text-white pt-5">
@@ -68,7 +68,7 @@ export default function Page() {
             </li>
             <hr className="my-5" />
             <li>
-              Read our{" "}
+              Read our{' '}
               <Link
                 href="https://f3nation.com/disclaimer-and-notice/"
                 target="_blank"
@@ -84,7 +84,7 @@ export default function Page() {
             </li>
             <hr className="my-5" />
             <li>
-              Check out the{" "}
+              Check out the{' '}
               <Link href="https://f3nation.com/lexicon/" target="_blank">
                 Lexicon
               </Link>
