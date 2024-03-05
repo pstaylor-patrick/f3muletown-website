@@ -19,6 +19,7 @@ export default function Page() {
           title="F3 HIM CONVERGENCE"
           subtitle="CALLING MEN TO VIRTUOUS LEADERSHIP"
           imgUrl={f3HeroImg.src}
+          leadIn="SAT, APR 13, 2024"
         />
       </main>
       <section className={`bg-gloom leading-tight py-16 px-4`}>
@@ -36,16 +37,28 @@ export default function Page() {
         <Button href={formHref} text="SUBMIT YOUR HC" target="_blank" />
       </section>
       <section className={`bg-iron leading-tight py-16 px-4`}>
-        <h2 className='pb-5'>AGENDA</h2>
-        <p className="text-white w-fit text-xl pb-1" style={{margin:"0 auto", fontFamily: "BlackOps"}}>[Sat, Apr 13, 2024]</p>
-        <a href={geolocationHref} target="_blank" className='hover:opacity-80'>
-        <p className="text-drp w-fit text-xl pb-1" style={{margin:"0 auto", fontFamily: "BlackOps"}}>Henry Horton State Park</p>
-        <p className="text-drp w-fit text-xl pb-5" style={{margin:"0 auto", fontFamily: "BlackOps"}}>Pavilion Shelter 2</p>
-        </a>
-        <ul
-          className="text-cmu text-left w-fit"
-          style={{ margin: '0 auto' }}
+        <h2 className="pb-5">AGENDA</h2>
+        <p
+          className="text-white w-fit text-xl pb-1"
+          style={{ margin: '0 auto', fontFamily: 'BlackOps' }}
         >
+          SAT, APR 13, 2024
+        </p>
+        <a href={geolocationHref} target="_blank" className="hover:opacity-80">
+          <p
+            className="text-drp w-fit text-xl pb-1"
+            style={{ margin: '0 auto', fontFamily: 'BlackOps' }}
+          >
+            HENRY HORTON STATE PARK
+          </p>
+          <p
+            className="text-drp w-fit text-xl pb-5"
+            style={{ margin: '0 auto', fontFamily: 'BlackOps' }}
+          >
+            PAVILION SHELTER 2
+          </p>
+        </a>
+        <ul className="text-cmu text-left w-fit" style={{ margin: '0 auto' }}>
           <li className="pb-5">
             <span className="bold text-white">0700H - </span> Beatdown
           </li>
@@ -59,8 +72,13 @@ export default function Page() {
             <span className="bold text-white">1200H - </span> Lunch
           </li>
         </ul>
-        <a href={geolocationHref} target="_blank" >
-        <Image src={shelter} alt={'Henry Horton State Park, Pavilion Shelter 2'} className='grayscale hover:grayscale-0 w-fit pt-5 pb-10' style={{margin:'0 auto'}} />
+        <a href={geolocationHref} target="_blank">
+          <Image
+            src={shelter}
+            alt={'Henry Horton State Park, Pavilion Shelter 2'}
+            className="grayscale hover:grayscale-0 w-fit pt-5 pb-10"
+            style={{ margin: '0 auto' }}
+          />
         </a>
         <Button href={formHref} text="SUBMIT YOUR HC" target="_blank" />
       </section>
