@@ -4,10 +4,13 @@ import Hero from '../_components/Hero';
 
 import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
 import Button from '../_components/Button';
+import shelter from '../../../public/Henry Horton Shelter 2.jpg';
+import Image from 'next/image';
 
 export default function Page() {
   const href = '/convergence';
   const formHref = 'https://forms.gle/afmWCdgtSPTCKbPD7';
+  const geolocationHref = 'https://maps.app.goo.gl/nFYveVBeoLAAY4Jf6';
   return (
     <>
       <Header href={href} />
@@ -20,7 +23,7 @@ export default function Page() {
       </main>
       <section className={`bg-gloom leading-tight py-16 px-4`}>
         <p className="text-xl">5 HOURS, 3 SPEAKERS, 1 MISSION</p>
-        <h2 className="text-5xl">CONVERGENCE</h2>
+        <h2 className="text-4xl py-5">CONVERGENCE</h2>
         <p className="text-cmu w-4/5 pb-10" style={{ margin: '0 auto' }}>
           This event is not merely a gathering; it is a crucible for refinement
           and growth. Each speaker, seasoned in the art of spiritual and
@@ -33,9 +36,14 @@ export default function Page() {
         <Button href={formHref} text="SUBMIT YOUR HC" target="_blank" />
       </section>
       <section className={`bg-iron leading-tight py-16 px-4`}>
-        <h2>AGENDA</h2>
+        <h2 className='pb-5'>AGENDA</h2>
+        <p className="text-white w-fit text-xl pb-1" style={{margin:"0 auto", fontFamily: "BlackOps"}}>[Sat, Apr 13, 2024]</p>
+        <a href={geolocationHref} target="_blank" className='hover:opacity-80'>
+        <p className="text-drp w-fit text-xl pb-1" style={{margin:"0 auto", fontFamily: "BlackOps"}}>Henry Horton State Park</p>
+        <p className="text-drp w-fit text-xl pb-5" style={{margin:"0 auto", fontFamily: "BlackOps"}}>Pavilion Shelter 2</p>
+        </a>
         <ul
-          className="pt-5 text-cmu text-left w-fit"
+          className="text-cmu text-left w-fit"
           style={{ margin: '0 auto' }}
         >
           <li className="pb-5">
@@ -51,6 +59,10 @@ export default function Page() {
             <span className="bold text-white">1200H - </span> Lunch
           </li>
         </ul>
+        <a href={geolocationHref} target="_blank" >
+        <Image src={shelter} alt={'Henry Horton State Park, Pavilion Shelter 2'} className='grayscale hover:grayscale-0 w-fit pt-5 pb-10' style={{margin:'0 auto'}} />
+        </a>
+        <Button href={formHref} text="SUBMIT YOUR HC" target="_blank" />
       </section>
       <section className={`bg-gloom leading-tight py-16 px-4`}>
         <h2>PLANNING TO ATTEND?</h2>
