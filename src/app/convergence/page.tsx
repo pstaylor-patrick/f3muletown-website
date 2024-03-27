@@ -74,7 +74,9 @@ export default function Page() {
         </ul>
         <a href={geolocationHref} target="_blank">
           <Image
-            src={shelter}
+            src={shelter.src}
+            height={shelter.height}
+            width={shelter.width}
             alt={'Henry Horton State Park, Pavilion Shelter 2'}
             className="grayscale hover:grayscale-0 w-fit pt-5 pb-10"
             style={{ margin: '0 auto' }}
