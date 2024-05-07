@@ -18,6 +18,7 @@ import f3ShovelFlag from '../../public/f3-shovel-flag.png';
 import CorePrinciple from './_components/CorePrinciple';
 
 import en from "../locales/en.json"
+import workouts from '../workouts.json'
 
 export const metadata: Metadata = {
   title: en.region_name,
@@ -61,7 +62,7 @@ export default function Page() {
               public spaces around {en.region_city}, {en.region_state}.
             </p>
             <p className="pb-10 font-bold">
-              We hold {en.aos_count}+ workouts in {en.region_city} each week. Weekday workouts are
+              We hold {workouts.workouts.length}+ workouts in {en.region_city} each week. Weekday workouts are
               generally 45 MIN & 60 MIN on Saturday.
             </p>
           </div>
