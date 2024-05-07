@@ -7,6 +7,9 @@ import Button from '../_components/Button';
 import shelter from '../../../public/Henry Horton Shelter 2.jpg';
 import Image from 'next/image';
 
+/**
+ * TODO: Either delete or update this page if not relevant to your region
+ */
 export default function Page() {
   const href = '/convergence';
   const formHref = 'https://forms.gle/afmWCdgtSPTCKbPD7';

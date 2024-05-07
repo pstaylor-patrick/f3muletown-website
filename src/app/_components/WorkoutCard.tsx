@@ -1,5 +1,11 @@
 import Link from 'next/link';
 
+/**
+ * TODO: refactor the enums & types in this component 
+ * to dynamically infer from JSON schema 
+ * to reduce redundancy and simplify maintainability
+ */
+
 export const WorkoutStyles = {
   MURPH: 'Murph',
   BEATDOWN: 'Beatdown',

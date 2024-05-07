@@ -1,0 +1,125 @@
+{
+  "$schema": "./workouts.schema.json",
+  "workouts": [
+    {
+      "ao": "Murph Monday",
+      "style": "Murph",
+      "location": {
+        "href": "https://goo.gl/maps/UEULdFoyEpTRwLLo9",
+        "text": "Woodland Park (11th st Entrance)"
+      },
+      "day": "Monday",
+      "time": "5:25 AM - 6:15 AM"
+    },
+    {
+      "ao": "The Phoenix",
+      "style": "Beatdown",
+      "location": {
+        "href": "https://goo.gl/maps/UEULdFoyEpTRwLLo9",
+        "text": "Woodland Park (11th st Entrance)"
+      },
+      "day": "Monday",
+      "time": "5:30 AM - 6:15 AM"
+    },
+    {
+      "ao": "Arena",
+      "style": "Rucks & Sandbags",
+      "location": {
+        "href": "https://goo.gl/maps/8UenhCFvXi6KQFWaA",
+        "text": "Riverwalk Park (Basketball Court)"
+      },
+      "day": "Tuesday",
+      "time": "5:15 AM - 6:15 AM"
+    },
+    {
+      "ao": "Compass",
+      "style": "Beatdown",
+      "location": {
+        "href": "https://goo.gl/maps/BvGZ49ycjCovcZbP6",
+        "text": "Columbia Public Square"
+      },
+      "day": "Tuesday",
+      "time": "5:30 AM - 6:15 AM"
+    },
+    {
+      "ao": "Slag Mountain",
+      "style": "Run",
+      "location": {
+        "href": "https://goo.gl/maps/ps3AKHmqueDevzQt7",
+        "text": "Maury County Park (Kids Kingdom)"
+      },
+      "day": "Wednesday",
+      "time": "5:20 AM - 6:15 AM"
+    },
+    {
+      "ao": "Iron Mule",
+      "style": "Weight Lifting",
+      "location": {
+        "href": "https://goo.gl/maps/ps3AKHmqueDevzQt7",
+        "text": "Maury County Park (Kids Kingdom)"
+      },
+      "day": "Wednesday",
+      "time": "5:30 AM - 6:15 AM"
+    },
+    {
+      "ao": "The Refuge",
+      "style": "Trail Run",
+      "location": {
+        "href": "https://goo.gl/maps/iQJLUJ5kk3hj7SwV9",
+        "text": "Chickasaw Trace Park"
+      },
+      "day": "Thursday",
+      "time": "5:30 AM - 6:15 AM"
+    },
+    {
+      "ao": "Ruck and Roll",
+      "style": "Ruck",
+      "location": {
+        "href": "https://goo.gl/maps/8UenhCFvXi6KQFWaA",
+        "text": "Riverwalk Park (Basketball Court)"
+      },
+      "day": "Thursday",
+      "time": "5:30 AM - 6:15 AM"
+    },
+    {
+      "ao": "The Challenge",
+      "style": "Beatdown",
+      "location": {
+        "href": "https://goo.gl/maps/Rv4udm1mpBXZFdGy8",
+        "text": "Columbia State Community College"
+      },
+      "day": "Friday",
+      "time": "5:30 AM - 6:15 AM"
+    },
+    {
+      "ao": "Outpost",
+      "style": "3rd F (Faith)",
+      "location": {
+        "href": "https://goo.gl/maps/j3YiN4xen7mRy8RK8",
+        "text": "Maury County Park (Monsanto Pavilion)"
+      },
+      "day": "Every Third Friday",
+      "time": "5:15 AM - 6:15 AM"
+    },
+    {
+      "ao": "Darkhorse",
+      "style": "Beatdown",
+      "location": {
+        "href": "https://goo.gl/maps/8UenhCFvXi6KQFWaA",
+        "text": "Riverwalk Park (Basketball Court)"
+      },
+      "day": "Saturday",
+      "time": "6:00 AM - 7:00 AM"
+    },
+    {
+      "ao": "Hawkeye",
+      "style": "Beatdown",
+      "location": {
+        "href": "https://maps.app.goo.gl/hpiKvFLT1iGJVwGG8",
+        "text": "Hampshire School"
+      },
+      "day": "All Saturdays Except the Last of the Month",
+      "time": "6:00 AM - 7:00 AM"
+    }
+  ]
+}

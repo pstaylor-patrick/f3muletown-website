@@ -4,7 +4,10 @@ import Header from '../_components/Header';
 import Footer from '../_components/Footer';
 import Hero from '../_components/Hero';
 
+/** replace with a regional image */
 import f3HeroImg from '../../../public/f3-refuge-2023-11-09.jpg';
+
+import en from '../../locales/en.json'
 
 export default function Page() {
   const href = '/fng';
@@ -22,7 +25,7 @@ export default function Page() {
           <p className="text-cmu pt-5">
             We appreciate you joining us and there is a lot of information to
             tell you but to avoid overwhelming you here are a few ways to keep
-            in touch and know what&apos;s going on in F3 Muletown. If you still
+            in touch and know what&apos;s going on in {en.region_name}. If you still
             have questions just ask any of the guys and they&apos;ll help or
             point you in the right direction!
           </p>

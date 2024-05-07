@@ -7,15 +7,21 @@ import Footer from './_components/Footer';
 import Button from './_components/Button';
 import Hero from './_components/Hero';
 
+// #region regional images
+// replace these with your region's own images
 import f3MuletownWhite from '../../public/f3-muletown-white.png';
+import f3HeroImg from '../../public/f3-compass-2023-11-14.jpg';
+// #endregion
+
 import f3White from '../../public/f3-white.png';
 import f3ShovelFlag from '../../public/f3-shovel-flag.png';
-import f3HeroImg from '../../public/f3-compass-2023-11-14.jpg';
 import CorePrinciple from './_components/CorePrinciple';
 
+import en from "../locales/en.json"
+
 export const metadata: Metadata = {
-  title: 'F3 Muletown',
-  description: 'FREE workout group for MEN',
+  title: en.region_name,
+  description: en.meta_description,
 };
 
 export default function Page() {
@@ -26,23 +32,23 @@ export default function Page() {
       <Header href={href} />
       <main>
         <Hero
-          title="ACCELERATE WITH US"
-          subtitle="FITNESS + FELLOWSHIP + FAITH"
+          title={en.hero_title}
+          subtitle={en.hero_subtitle}
           imgUrl={f3HeroImg.src}
         />
         <section className={`bg-gloom ${commonSliceClassNames}`}>
           <div className="shadow-xl">
             <h2 className="leading-none">
               <span className="opacity-70">THIS IS</span>
-              <span className="block text-5xl py-5">F3 MULETOWN</span>
+              <span className="block text-5xl py-5">{en.region_name}</span>
             </h2>
             <p className="subtitle text-xl pb-10 opacity-70">
-              FREE workout group for MEN
+              {en.meta_description}
             </p>
           </div>
           <Image
             src={f3MuletownWhite}
-            alt="F3 Muletown White"
+            alt={`${en.region_name} White`}
             width={200}
             className="pt-8 pb-4 my-0 mx-auto"
           />
@@ -51,11 +57,11 @@ export default function Page() {
           <div>
             <h3 className="pb-6">WE ARE</h3>
             <p className="pb-6">
-              100+ guys that meet up in small groups to workout in parks and
-              public spaces around Columbia, Tennessee.
+              {en.pax_count}+ guys that meet up in small groups to workout in parks and
+              public spaces around {en.region_city}, {en.region_state}.
             </p>
             <p className="pb-10 font-bold">
-              We hold 10+ workouts in Columbia each week. Weekday workouts are
+              We hold {en.aos_count}+ workouts in {en.region_city} each week. Weekday workouts are
               generally 45 MIN & 60 MIN on Saturday.
             </p>
           </div>
