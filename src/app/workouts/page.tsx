@@ -7,6 +7,7 @@ import Button from '../_components/Button';
 import WorkoutCard, {
   workoutsTomorrow,
   workoutsAnotherDay,
+  sortWorkouts,
 } from '../_components/WorkoutCard';
 
 /** replace with a regional image */
@@ -55,7 +56,7 @@ export default function Page() {
         <section className={`bg-gloom leading-tight py-16 px-4`}>
           <h2 className="py-5">JOIN US</h2>
           <ul>
-            {workoutsAnotherDay(_workouts).map((w, i) => (
+            {sortWorkouts(_workouts).map((w, i) => (
               <li key={i} className={i > 0 ? 'pt-5' : ''}>
                 <WorkoutCard
                   ao={w.ao}
