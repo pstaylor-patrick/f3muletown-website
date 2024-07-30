@@ -15,8 +15,14 @@ import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
 
 import en from '../../locales/en.json';
 import workouts from '../../workouts.json';
+import { Metadata } from 'next';
 
 const _workouts = workouts.workouts;
+
+export const metadata: Metadata = {
+  title: `Workouts - ${en.region_name}`,
+  description: 'Find a workout location (AO) near you.',
+};
 
 export default function Page() {
   const href = '/workouts';
