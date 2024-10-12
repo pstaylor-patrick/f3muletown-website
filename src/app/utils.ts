@@ -40,9 +40,6 @@ declare global {
   interface Document {
     setNow: (date: string | undefined) => void;
     getNow: () => Date;
+    setWorkouts: (workouts: Workout[]) => void;
   }
-}
-if (document) {
-  document.setNow = setNow;
-  document.getNow = getNow;
-}
+} ``

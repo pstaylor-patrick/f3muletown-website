@@ -6,5 +6,5 @@ Feature: Main Page
 
   Scenario: should have links to the other pages
     Given I am on the "main" page
-    Then I should see a link to "NEW TO F3 [FNG]" that goes to "/fng"
-    And I should see a link to "WORKOUTS [AO]" that goes to "/workouts"
+    Then I should see a link "NEW TO F3 [FNG]" that goes to "/fng"
+    And I should see a link "WORKOUTS [AO]" that goes to "/workouts"

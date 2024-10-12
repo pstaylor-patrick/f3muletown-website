@@ -1,4 +1,3 @@
-'use client';
 export type Style = 'Murph' | 'Beatdown' | 'Run' | 'Ruck' | 'Trail Run' | 'Rucks & Sandbags' | 'Weight Lifting' | '3rd F (Faith)';
 export type Day = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
 export interface Workout {
@@ -189,12 +188,4 @@ export function setWorkouts(newWorkouts: Workout[]) {
   // clear the array
   workouts.length = 0;
   workouts.push(...newWorkouts);
-}
-declare global {
-  interface Document {
-    setWorkouts: (workouts: Workout[]) => void;
-  }
-}
-if (document) {
-  document.setWorkouts = setWorkouts;
 }

@@ -8,6 +8,7 @@ Given('I am on the {string} page', async ({ page }, whichPage: string) => {
   switch (whichPage) {
     case 'workouts':
       await page.goto('/workouts');
+      await page.waitForFunction(() => typeof document.setWorkouts === 'function');
       break;
     default:
       await page.goto('/');
@@ -19,7 +20,7 @@ Then('I should see a title {string}', async ({ page }, title: string) => {
   await expect(await page.title()).toBe(title);
 })
 
-Then('I should see a link to {string} that goes to {string}', async ({ page }, name: string, href: string) => {
+Then('I should see a link {string} that goes to {string}', async ({ page }, name: string, href: string) => {
   await expect(page.getByRole('link', { name })).toBeVisible();
   await expect(page.getByRole('link', { name })).toHaveAttribute('href', href);
 })
