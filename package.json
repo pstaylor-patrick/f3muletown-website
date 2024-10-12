@@ -6,21 +6,30 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "bddgen && playwright test"
   },
   "dependencies": {
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.2.1"
+    "tailwind-merge": "^2.2.1",
+    "date-fns": "^3.6.0"
+  },
+  "packageManager": "npm@10.7.0",
+  "engines": {
+    "node": "18.x",
+    "npm": "10.7.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.45.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
+    "playwright-bdd": "^7.1.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",

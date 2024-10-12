@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+'use client';
 import Header from '../_components/Header';
 import Footer from '../_components/Footer';
 import Hero from '../_components/Hero';
@@ -15,10 +14,20 @@ import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
 
 import en from '../../locales/en.json';
 import workouts from '../../workouts.json';
+import { Metadata } from 'next';
+import { getWorkouts } from '@/workouts'; 
+import { sortWorkoutsNew } from '../utils';
+import { useState } from 'react';
 
-const _workouts = workouts.workouts;
+// let _workouts = sortWorkoutsNew(getWorkouts());
+
+// export const metadata: Metadata = {
+  //   title: `Workouts - ${en.region_name}`,
+  //   description: 'Find a workout location (AO) near you.',
+  // };
 
 export default function Page() {
+  const [_workouts, setWorkouts] = useState(sortWorkoutsNew(getWorkouts()));
   const href = '/workouts';
   const mapDetails = {
     lat: en.region_map_lat,
@@ -54,18 +63,19 @@ export default function Page() {
           <Button href={mapUrl} text="VIEW FULL SCREEN" target="_blank" />
         </section>
         <section className={`bg-gloom leading-tight py-16 px-4`}>
-          <h2 className="py-5">JOIN US</h2>
-          <ul>
-            {sortWorkouts(_workouts).map((w, i) => (
+          <h2 className="py-5">JOIN US 
+            &nbsp;
+            <button aria-label="refresh" onClick={() => setWorkouts(sortWorkoutsNew(getWorkouts()))}>🔄</button>
+          </h2>
+          <ul data-testid="workout-list">
+            {_workouts.map((w, i) => (
               <li key={i} className={i > 0 ? 'pt-5' : ''}>
                 <WorkoutCard
                   ao={w.ao}
-                  q={w.q}
-                  avgAttendance={w.avgAttendance}
                   style={w.style}
                   location={w.location}
-                  day={w.day}
-                  time={w.time}
+                  day={w.dayLabel}
+                  time={w.timeLabel}
                 />
               </li>
             ))}
