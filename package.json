@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "bddgen && playwright test"
+    "install:test": "npx playwright install --with-deps",
+    "test": "npm run install:test && bddgen && playwright test"
   },
   "dependencies": {
     "next": "14.0.3",
@@ -15,7 +16,7 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
     "date-fns": "^3.6.0"
-    
+
   },
   "packageManager": "npm@10.7.0",
   "engines": {
