@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "install:test": "npx playwright install --with-deps",
-    "test": "npm run install:test && bddgen && playwright test"
+    "test": "bddgen && playwright test"
   },
   "dependencies": {
     "next": "14.0.3",
