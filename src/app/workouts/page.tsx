@@ -1,24 +1,26 @@
-import Link from 'next/link';
-
+'use client';
 import Header from '../_components/Header';
 import Footer from '../_components/Footer';
 import Hero from '../_components/Hero';
 import Button from '../_components/Button';
-import WorkoutCard, {
-  workoutsTomorrow,
-  workoutsAnotherDay,
-  sortWorkouts,
-} from '../_components/WorkoutCard';
+import WorkoutCard from '../_components/WorkoutCard';
 
 /** replace with a regional image */
 import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
 
 import en from '../../locales/en.json';
-import workouts from '../../workouts.json';
-
-const _workouts = workouts.workouts;
+import { getWorkouts, setWorkouts } from '@/workouts'; 
+import { getNow, setNow, sortWorkoutsNew } from '../utils';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
+  const [_workouts, setWorkoutsState] = useState(sortWorkoutsNew(getWorkouts()));
+  // setup test helper functions
+  useEffect(() => {
+    document.setWorkouts = setWorkouts;
+    document.setNow = setNow;
+    document.getNow = getNow;
+  }, []);
   const href = '/workouts';
   const mapDetails = {
     lat: en.region_map_lat,
@@ -54,18 +56,19 @@ export default function Page() {
           <Button href={mapUrl} text="VIEW FULL SCREEN" target="_blank" />
         </section>
         <section className={`bg-gloom leading-tight py-16 px-4`}>
-          <h2 className="py-5">JOIN US</h2>
-          <ul>
-            {sortWorkouts(_workouts).map((w, i) => (
+          <h2 className="py-5">JOIN US 
+            &nbsp;
+            <button aria-label="refresh" onClick={() => setWorkoutsState(sortWorkoutsNew(getWorkouts()))}>🔄</button>
+          </h2>
+          <ul data-testid="workout-list">
+            {_workouts.map((w, i) => (
               <li key={i} className={i > 0 ? 'pt-5' : ''}>
                 <WorkoutCard
                   ao={w.ao}
-                  q={w.q}
-                  avgAttendance={w.avgAttendance}
                   style={w.style}
                   location={w.location}
-                  day={w.day}
-                  time={w.time}
+                  day={w.dayLabel}
+                  time={w.timeLabel}
                 />
               </li>
             ))}
