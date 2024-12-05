@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import f3White from '../../../public/f3-white.png';
-
 export default function Header({ href }: { href: string }) {
   const pages = [
     // { href: "/", text: "HOME" },
@@ -15,7 +13,7 @@ export default function Header({ href }: { href: string }) {
     <header className="p-5 text-center">
       <Link href="/">
         <Image
-          src={f3White}
+          src={'/f3-white.png'}
           alt="F3 White"
           width={60}
           height={60}
