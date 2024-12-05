@@ -7,9 +7,10 @@ import Hero from '../_components/Hero';
 /** replace with a regional image */
 import f3HeroImg from '../../../public/f3-refuge-2023-11-09.jpg';
 
-import en from '../../locales/en.json'
+import { fetchLocaleData } from '@/utils/fetchLocaleData';
 
-export default function Page() {
+export default async function Page() {
+  const locales = await fetchLocaleData()
   const href = '/fng';
   return (
     <>
@@ -25,7 +26,7 @@ export default function Page() {
           <p className="text-cmu pt-5">
             We appreciate you joining us and there is a lot of information to
             tell you but to avoid overwhelming you here are a few ways to keep
-            in touch and know what&apos;s going on in {en.region_name}. If you still
+            in touch and know what&apos;s going on in {locales.region_name}. If you still
             have questions just ask any of the guys and they&apos;ll help or
             point you in the right direction!
           </p>

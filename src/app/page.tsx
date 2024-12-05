@@ -18,17 +18,20 @@ import f3HeroImg from '../../public/f3-compass-2023-11-14.jpg';
 import f3White from '../../public/f3-white.png';
 import f3ShovelFlag from '../../public/f3-shovel-flag.png';
 import CorePrinciple from './_components/CorePrinciple';
+import { fetchWorkoutsData } from '@/utils/fetchWorkoutsData';
 
-import en from "../locales/en.json"
-import workouts from '../workouts.json'
+export async function generateMetadata(): Promise<Metadata> {
+  const localeData = await fetchLocaleData();
 
-export const metadata: Metadata = {
-  title: en.region_name,
-  description: en.meta_description,
-};
+  return {
+    title: localeData.region_name,
+    description: localeData.meta_description,
+  };
+}
 
 export default async function Page() {
   const localeData = await fetchLocaleData();
+  const workouts = await fetchWorkoutsData();
 
   const href = '/';
   const commonSliceClassNames = 'py-8 px-4';
@@ -66,7 +69,7 @@ export default async function Page() {
               public spaces around {localeData.region_city}, {localeData.region_state}.
             </p>
             <p className="pb-10 font-bold">
-              We hold {workouts.workouts.length}+ workouts in {localeData.region_city} each week. Weekday workouts are
+              We hold {workouts.length}+ workouts in {localeData.region_city} each week. Weekday workouts are
               generally 45 MIN & 60 MIN on Saturday.
             </p>
           </div>

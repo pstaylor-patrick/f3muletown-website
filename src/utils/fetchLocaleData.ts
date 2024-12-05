@@ -20,7 +20,7 @@ export async function fetchLocaleData(): Promise<LocaleData> {
   /** HACK: `&cacheKey=` */
   /** TODO: `&sheet=locales` */
   const sheetURL = 
-    'https://docs.google.com/spreadsheets/d/1aHl-uYuSEL5QX05LnjffOuSQWlIFVLRGa5vWX7LKn9s/gviz/tq?tqx=out:csv&cacheKey=ED3041CD9BA1';
+    'https://docs.google.com/spreadsheets/d/1aHl-uYuSEL5QX05LnjffOuSQWlIFVLRGa5vWX7LKn9s/gviz/tq?tqx=out:csv&sheet=locales&cacheKey=AF50E396D37A';
   const response = await fetch(sheetURL);
   const csvText = await response.text();
 

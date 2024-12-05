@@ -13,21 +13,17 @@ import WorkoutCard, {
 /** replace with a regional image */
 import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
 
-/** TODO: replace with fetchLocaleData */
-import en from '../../locales/en.json';
-// import workouts from '../../workouts.json';
-
 import { fetchWorkoutsData } from '../../utils/fetchWorkoutsData';
-
-// const _workouts = workouts.workouts;
+import { fetchLocaleData } from '@/utils/fetchLocaleData';
 
 export default async function Page() {
-  const _workouts = await fetchWorkoutsData()
+  const workouts = await fetchWorkoutsData()
+  const locales = await fetchLocaleData()
   const href = '/workouts';
   const mapDetails = {
-    lat: en.region_map_lat,
-    lon: en.region_map_lon,
-    zoom: en.region_map_zoom,
+    lat: locales.region_map_lat,
+    lon: locales.region_map_lon,
+    zoom: locales.region_map_zoom,
   };
   const mapUrl = `https://map.f3nation.com/?lat=${mapDetails.lat}&lon=${mapDetails.lon}&zoom=${mapDetails.zoom}`;
   const today = new Date().getDay();
@@ -60,7 +56,7 @@ export default async function Page() {
         <section className={`bg-gloom leading-tight py-16 px-4`}>
           <h2 className="py-5">JOIN US</h2>
           <ul>
-            {sortWorkouts(_workouts).map((w, i) => (
+            {sortWorkouts(workouts).map((w, i) => (
               <li key={i} className={i > 0 ? 'pt-5' : ''}>
                 <WorkoutCard
                   ao={w.ao}
