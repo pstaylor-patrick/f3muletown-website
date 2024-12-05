@@ -13,12 +13,16 @@ import WorkoutCard, {
 /** replace with a regional image */
 import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
 
+/** TODO: replace with fetchLocaleData */
 import en from '../../locales/en.json';
-import workouts from '../../workouts.json';
+// import workouts from '../../workouts.json';
 
-const _workouts = workouts.workouts;
+import { fetchWorkoutsData } from '../../utils/fetchWorkoutsData';
 
-export default function Page() {
+// const _workouts = workouts.workouts;
+
+export default async function Page() {
+  const _workouts = await fetchWorkoutsData()
   const href = '/workouts';
   const mapDetails = {
     lat: en.region_map_lat,
