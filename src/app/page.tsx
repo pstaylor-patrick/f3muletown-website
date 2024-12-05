@@ -7,6 +7,8 @@ import Footer from './_components/Footer';
 import Button from './_components/Button';
 import Hero from './_components/Hero';
 
+import { fetchLocaleData } from '../utils/fetchLocaleData';
+
 // #region regional images
 // replace these with your region's own images
 import f3MuletownWhite from '../../public/f3-muletown-white.png';
@@ -25,7 +27,9 @@ export const metadata: Metadata = {
   description: en.meta_description,
 };
 
-export default function Page() {
+export default async function Page() {
+  const localeData = await fetchLocaleData();
+
   const href = '/';
   const commonSliceClassNames = 'py-8 px-4';
   return (
@@ -33,23 +37,23 @@ export default function Page() {
       <Header href={href} />
       <main>
         <Hero
-          title={en.hero_title}
-          subtitle={en.hero_subtitle}
+          title={localeData.hero_title}
+          subtitle={localeData.hero_subtitle}
           imgUrl={f3HeroImg.src}
         />
         <section className={`bg-gloom ${commonSliceClassNames}`}>
           <div className="shadow-xl">
             <h2 className="leading-none">
               <span className="opacity-70">THIS IS</span>
-              <span className="block text-5xl py-5">{en.region_name}</span>
+              <span className="block text-5xl py-5">{localeData.region_name}</span>
             </h2>
             <p className="subtitle text-xl pb-10 opacity-70">
-              {en.meta_description}
+              {localeData.meta_description}
             </p>
           </div>
           <Image
             src={f3MuletownWhite}
-            alt={`${en.region_name} White`}
+            alt={`${localeData.region_name} White`}
             width={200}
             className="pt-8 pb-4 my-0 mx-auto"
           />
@@ -58,11 +62,11 @@ export default function Page() {
           <div>
             <h3 className="pb-6">WE ARE</h3>
             <p className="pb-6">
-              {en.pax_count}+ guys that meet up in small groups to workout in parks and
-              public spaces around {en.region_city}, {en.region_state}.
+              {localeData.pax_count}+ guys that meet up in small groups to workout in parks and
+              public spaces around {localeData.region_city}, {localeData.region_state}.
             </p>
             <p className="pb-10 font-bold">
-              We hold {workouts.workouts.length}+ workouts in {en.region_city} each week. Weekday workouts are
+              We hold {workouts.workouts.length}+ workouts in {localeData.region_city} each week. Weekday workouts are
               generally 45 MIN & 60 MIN on Saturday.
             </p>
           </div>
