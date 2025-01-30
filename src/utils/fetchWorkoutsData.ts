@@ -12,9 +12,11 @@ interface Workout {
 }
 
 export async function fetchWorkoutsData(): Promise<Workout[]> {
-  /** HACK: `&cacheKey=` */
+  const today = new Date();
+  /** update data no more than once per day */
+  const cacheKey = `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`;
   const sheetURL = 
-    'https://docs.google.com/spreadsheets/d/1aHl-uYuSEL5QX05LnjffOuSQWlIFVLRGa5vWX7LKn9s/gviz/tq?tqx=out:csv&sheet=workouts&cacheKey=68E350C5584D';
+    `https://docs.google.com/spreadsheets/d/1aHl-uYuSEL5QX05LnjffOuSQWlIFVLRGa5vWX7LKn9s/gviz/tq?tqx=out:csv&sheet=workouts&cacheKey=${cacheKey}`;
   const response = await fetch(sheetURL);
   const csvText = await response.text();
 
