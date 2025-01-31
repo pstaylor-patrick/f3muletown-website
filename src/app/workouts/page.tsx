@@ -13,8 +13,7 @@ import WorkoutCard, {
 /** replace with a regional image */
 import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
 
-import { fetchWorkoutsData } from '../../utils/fetchWorkoutsData';
-import { fetchLocaleData } from '@/utils/fetchLocaleData';
+import { fetchLocaleData, fetchWorkoutsData } from '../../utils/fetchContent';
 
 export default async function Page() {
   const workouts = await fetchWorkoutsData()

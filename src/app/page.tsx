@@ -7,7 +7,7 @@ import Footer from './_components/Footer';
 import Button from './_components/Button';
 import Hero from './_components/Hero';
 
-import { fetchLocaleData } from '../utils/fetchLocaleData';
+import { fetchLocaleData,fetchWorkoutsData } from '../utils/fetchContent';
 
 // #region regional images
 // replace these with your region's own images
@@ -18,7 +18,6 @@ import f3HeroImg from '../../public/f3-compass-2023-11-14.jpg';
 import f3White from '../../public/f3-white.png';
 import f3ShovelFlag from '../../public/f3-shovel-flag.png';
 import CorePrinciple from './_components/CorePrinciple';
-import { fetchWorkoutsData } from '@/utils/fetchWorkoutsData';
 
 export async function generateMetadata(): Promise<Metadata> {
   const localeData = await fetchLocaleData();

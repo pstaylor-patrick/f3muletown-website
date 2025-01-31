@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import fb from '../../../public/fb.svg';
-import { fetchLocaleData } from '@/utils/fetchLocaleData';
+import { fetchLocaleData } from '@/utils/fetchContent';
 
 export default async function Footer() {
   const locales = await fetchLocaleData()

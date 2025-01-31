@@ -7,7 +7,7 @@ import Hero from '../_components/Hero';
 /** replace with a regional image */
 import f3HeroImg from '../../../public/f3-refuge-2023-11-09.jpg';
 
-import { fetchLocaleData } from '@/utils/fetchLocaleData';
+import { fetchLocaleData } from '@/utils/fetchContent';
 
 export default async function Page() {
   const locales = await fetchLocaleData()
