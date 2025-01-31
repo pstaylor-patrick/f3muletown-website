@@ -66,14 +66,65 @@ export const fetchGoogleSheetsData = async <T>(
 
 export const REGION_NAME = 'Muletown';
 
+export async function fetchAllRegions(
+  cacheKey?: string
+): Promise<LocaleData[]> {
+  const data = await fetchGoogleSheetsData<RawLocaleData>(
+    GoogleSheetsDataType.FORMS_DATA,
+    cacheKey
+  );
+
+  // Get unique regions and their latest data
+  const regionMap = new Map<string, RawLocaleData>();
+  data.forEach((entry) => {
+    const existingEntry = regionMap.get(entry['Region Name']);
+    if (
+      !existingEntry ||
+      new Date(entry.Timestamp) > new Date(existingEntry.Timestamp)
+    ) {
+      regionMap.set(entry['Region Name'], entry);
+    }
+  });
+
+  return Array.from(regionMap.values()).map((entry) => ({
+    region_name: entry['Region Name'],
+    meta_description: entry['Meta Description'],
+    hero_title: entry['Hero Title'],
+    hero_subtitle: entry['Hero Subtitle'],
+    pax_count: Number(entry['PAX Count']),
+    region_city: entry['Region City'],
+    region_state: entry['Region State'],
+    region_facebook: entry['Region Facebook URL'],
+    region_map_lat: Number(entry['Region Map Latitude']),
+    region_map_lon: Number(entry['Region Map Longitude']),
+    region_map_zoom: Number(entry['Region Map Zoom']),
+  }));
+}
+
+export function getRegionSlug(regionName: string): string {
+  return regionName.toLowerCase().trim().replace(/\s+/g, '-');
+}
+
+export function getRegionNameFromSlug(slug: string): string {
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 export async function fetchLocaleData(
-  regionName: string = REGION_NAME,
+  regionSlug?: string,
   cacheKey?: string
 ): Promise<LocaleData> {
   const data = await fetchGoogleSheetsData<RawLocaleData>(
     GoogleSheetsDataType.FORMS_DATA,
     cacheKey
   );
+
+  let regionName = REGION_NAME;
+  if (regionSlug) {
+    regionName = getRegionNameFromSlug(regionSlug);
+  }
 
   // Filter for specified region entries and sort by timestamp in descending order
   const sortedData = [...data]
