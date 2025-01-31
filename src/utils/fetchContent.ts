@@ -25,9 +25,25 @@ interface Workout {
   time: string;
 }
 
+interface RawLocaleData {
+  Timestamp: string;
+  'Region Name': string;
+  'Meta Description': string;
+  'Hero Title': string;
+  'Hero Subtitle': string;
+  'PAX Count': string;
+  'Region City': string;
+  'Region State': string;
+  'Region Facebook URL': string;
+  'Region Map Latitude': string;
+  'Region Map Longitude': string;
+  'Region Map Zoom': string;
+}
+
 export const enum GoogleSheetsDataType {
   LOCALE_DATA = 'locales',
   WORKOUT_DATA = 'workouts',
+  FORMS_DATA = '1546501139',
 }
 
 const getCacheKey = () => {
@@ -35,24 +51,57 @@ const getCacheKey = () => {
   return `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, '0')}${String(today.getDate()).padStart(2, '0')}`;
 };
 
-export const fetchGoogleSheetsData = async (
+export const fetchGoogleSheetsData = async <T>(
   googleSheetsDataType: GoogleSheetsDataType,
   cacheKey?: string
-) => {
+): Promise<T[]> => {
   const _cacheKey = cacheKey ?? getCacheKey();
   const url = `https://docs.google.com/spreadsheets/d/1aHl-uYuSEL5QX05LnjffOuSQWlIFVLRGa5vWX7LKn9s/gviz/tq?tqx=out:csv&sheet=${googleSheetsDataType}&cacheKey=${_cacheKey}`;
   const response = await fetch(url);
   const csvText = await response.text();
-  const parsedData = Papa.parse(csvText, { header: true }).data;
+  const parsedData = Papa.parse(csvText, { header: true }).data as T[];
+  console.log('parsedData', parsedData);
   return parsedData;
 };
 
-export async function fetchLocaleData(cacheKey?: string): Promise<LocaleData> {
-  const data = await fetchGoogleSheetsData(
-    GoogleSheetsDataType.LOCALE_DATA,
+export const REGION_NAME = 'Muletown';
+
+export async function fetchLocaleData(
+  regionName: string = REGION_NAME,
+  cacheKey?: string
+): Promise<LocaleData> {
+  const data = await fetchGoogleSheetsData<RawLocaleData>(
+    GoogleSheetsDataType.FORMS_DATA,
     cacheKey
   );
-  return data.pop() as LocaleData;
+
+  // Filter for specified region entries and sort by timestamp in descending order
+  const sortedData = [...data]
+    .filter((entry) => entry['Region Name'] === regionName)
+    .sort((a, b) => {
+      const dateA = new Date(a.Timestamp);
+      const dateB = new Date(b.Timestamp);
+      return dateB.getTime() - dateA.getTime();
+    });
+
+  if (sortedData.length === 0) {
+    throw new Error(`No data found for ${regionName} region`);
+  }
+
+  const latestData = sortedData[0];
+  return {
+    region_name: latestData['Region Name'],
+    meta_description: latestData['Meta Description'],
+    hero_title: latestData['Hero Title'],
+    hero_subtitle: latestData['Hero Subtitle'],
+    pax_count: Number(latestData['PAX Count']),
+    region_city: latestData['Region City'],
+    region_state: latestData['Region State'],
+    region_facebook: latestData['Region Facebook URL'],
+    region_map_lat: Number(latestData['Region Map Latitude']),
+    region_map_lon: Number(latestData['Region Map Longitude']),
+    region_map_zoom: Number(latestData['Region Map Zoom']),
+  } as LocaleData;
 }
 
 export async function fetchWorkoutsData(cacheKey?: string): Promise<Workout[]> {
