@@ -1,17 +1,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Header({ href }: { href: string }) {
+interface HeaderProps {
+  href: string;
+}
+
+export default function Header({ href }: HeaderProps) {
+  const isRegionPage = href.startsWith('/regions/');
+  const regionSlug = isRegionPage ? href.split('/')[2] : null;
+
   const pages = [
-    // { href: "/", text: "HOME" },
-    { href: '/fng', text: 'NEW TO F3 [FNG]' },
-    { href: '/workouts', text: 'WORKOUTS [AO]' },
-    // { href: '/convergence', text: 'CONVERGENCE [HC]' },
+    { href: '/', text: 'ALL REGIONS' },
+    ...(regionSlug ? [
+      { href: `/regions/${regionSlug}/fng`, text: 'NEW TO F3 [FNG]' },
+      { href: `/regions/${regionSlug}/workouts`, text: 'WORKOUTS [AO]' },
+    ] : [])
   ];
 
   return (
     <header className="p-5 text-center">
-      <Link href="/">
+      <Link href={regionSlug ? `/regions/${regionSlug}` : '/'}>
         <Image
           src={'/f3-white.png'}
           alt="F3 White"
