@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -126,8 +127,15 @@ export default async function Page({ params }: Props) {
         <section className={`bg-gloom leading-tight pt-20 px-4 pb-24`}>
           <h2 className="text-5xl">[F.N.G.]</h2>
           <p className="text-cmu pt-5">
-            Hey Friendly New Guy... What did you{' '}
-            <span className="italic">think</span> FNG stood for?
+            &quot;Here is one undeniable truth that I know about each of us, we
+            need authentic relationships with other men who are working to be
+            strong fathers, husbands and leaders. Isolation will destroy a man!
+            We have the opportunity to change our community and the trajectory
+            of our families. Getting in the best shape of your life is just a by
+            product. The work out is the magnet, the relationships and community
+            with other men will keep bringing you back. Lock shields with us and
+            help us accomplish F3&apos;s mission to invigorate male leadership
+            in our community.&quot;
           </p>
           <p className="text-xl py-5">
             ARE YOU LOOKING TO ACCELERATE YOUR LIFE?
@@ -135,7 +143,7 @@ export default async function Page({ params }: Props) {
           <p className="text-cmu text-md pb-10">
             We welcome men of all fitness levels to our workouts and have no
             requirement for membership other than showing up at the appointed
-            time + place and following the workout leader [the "Q" in F³
+            time + place and following the workout leader [the &quot;Q&quot; in F³
             lexicon]. If you still have questions just ask any of the guys and
             they&apos;ll help or point you in the right direction!
           </p>
