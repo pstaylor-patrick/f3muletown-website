@@ -62,6 +62,16 @@
       "time": "5:30 AM - 6:15 AM"
     },
     {
+      "ao": "Mount Ruckmore",
+      "style": "Ruck",
+      "location": {
+        "href": "https://goo.gl/maps/ps3AKHmqueDevzQt7",
+        "text": "Maury County Park (Kids Kingdom)"
+      },
+      "day": "Wednesday",
+      "time": "5:15 AM - 6:15 AM"
+    },
+    {
       "ao": "The Refuge",
       "style": "Trail Run",
       "location": {
