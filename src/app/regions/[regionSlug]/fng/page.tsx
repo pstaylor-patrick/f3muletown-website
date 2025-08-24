@@ -1,17 +1,32 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-import Header from '../_components/Header';
-import Footer from '../_components/Footer';
-import Hero from '../_components/Hero';
+import Header from '../../../_components/Header';
+import Footer from '../../../_components/Footer';
+import Hero from '../../../_components/Hero';
 
 /** replace with a regional image */
-import f3HeroImg from '../../../public/f3-refuge-2023-11-09.jpg';
+import f3HeroImg from '../../../../../public/f3-refuge-2023-11-09.jpg';
 
-import { fetchLocaleData } from '@/utils/fetchLocaleData';
+import { fetchLocaleData } from '@/utils/fetchContent';
 
-export default async function Page() {
-  const locales = await fetchLocaleData()
-  const href = '/fng';
+interface Props {
+  params: {
+    regionSlug: string;
+  };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const localeData = await fetchLocaleData(params.regionSlug);
+  return {
+    title: `${localeData.region_name} FNG`,
+    description: `New to F3 ${localeData.region_name}? Learn what to expect at your first workout.`,
+  };
+}
+
+export default async function Page({ params }: Props) {
+  const locales = await fetchLocaleData(params.regionSlug);
+  const href = `/regions/${params.regionSlug}/fng`;
   return (
     <>
       <Header href={href} />
@@ -83,7 +98,7 @@ export default async function Page() {
             </li>
             <hr className="my-5" />
             <li>
-              Visit our <Link href="/workouts">Workouts</Link> page to see what
+              Visit our <Link href={`/regions/${params.regionSlug}/workouts`}>Workouts</Link> page to see what
               site works best for you.
             </li>
             <hr className="my-5" />
@@ -113,4 +128,4 @@ export default async function Page() {
       <Footer />
     </>
   );
-}
+} 

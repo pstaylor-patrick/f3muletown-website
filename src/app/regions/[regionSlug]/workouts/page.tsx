@@ -1,25 +1,39 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-import Header from '../_components/Header';
-import Footer from '../_components/Footer';
-import Hero from '../_components/Hero';
-import Button from '../_components/Button';
+import Header from '../../../_components/Header';
+import Footer from '../../../_components/Footer';
+import Hero from '../../../_components/Hero';
+import Button from '../../../_components/Button';
 import WorkoutCard, {
   workoutsTomorrow,
   workoutsAnotherDay,
   sortWorkouts,
-} from '../_components/WorkoutCard';
+} from '../../../_components/WorkoutCard';
 
 /** replace with a regional image */
-import f3HeroImg from '../../../public/f3-darkhorse-2023-11-04.jpg';
+import f3HeroImg from '../../../../../public/f3-darkhorse-2023-11-04.jpg';
 
-import { fetchWorkoutsData } from '../../utils/fetchWorkoutsData';
-import { fetchLocaleData } from '@/utils/fetchLocaleData';
+import { fetchLocaleData, fetchWorkoutsData } from '@/utils/fetchContent';
 
-export default async function Page() {
-  const workouts = await fetchWorkoutsData()
-  const locales = await fetchLocaleData()
-  const href = '/workouts';
+interface Props {
+  params: {
+    regionSlug: string;
+  };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const localeData = await fetchLocaleData(params.regionSlug);
+  return {
+    title: `${localeData.region_name} Workouts`,
+    description: `Find F3 workouts in ${localeData.region_city}, ${localeData.region_state}`,
+  };
+}
+
+export default async function Page({ params }: Props) {
+  const workouts = await fetchWorkoutsData();
+  const locales = await fetchLocaleData(params.regionSlug);
+  const href = `/regions/${params.regionSlug}/workouts`;
   const mapDetails = {
     lat: locales.region_map_lat,
     lon: locales.region_map_lon,
@@ -75,4 +89,4 @@ export default async function Page() {
       <Footer />
     </>
   );
-}
+} 
