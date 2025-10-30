@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { redirectUrl } from "@/lib/redirect";
 
-export default function Home() {
+export default function CatchAll() {
   redirect(redirectUrl);
 }
