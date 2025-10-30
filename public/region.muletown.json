@@ -1,7 +1,0 @@
-{
-  "$id": "muletown",
-  "$schema": "./region.schema.json",
-  "regionName": "Muletown",
-  "cityName": "Columbia",
-  "stateName": "Tennessee"
-}
